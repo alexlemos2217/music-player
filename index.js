@@ -85,7 +85,7 @@ const music_list = [
         img: "./assets/img/bl.png",
         name: "Blinding Lights",
         artist: "The Weeknd",
-        music: "./assets/audio/bl.mp3",
+        music: "./assets/audio/blindinglights.mp3",
     },
     {
         img: "./assets/img/chemical.png",
