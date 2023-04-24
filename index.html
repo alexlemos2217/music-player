@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Alexander Lemos &mdash; Playlist</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/faviconale.png">
+    <!-- Scripts -->
+    <script defer src="index.js"></script>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/scale.css">
+</head>
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <div class="img-style">
+                <a 
+                    href="https://open.spotify.com/user/12163759139?si=fea7b829a96c416c"
+                >
+                    <img src="/assets/img/spotify.png" width="30px" alt="playlist">
+                </a>
+            </div>
+            <div class="details">
+                <div class="now-playing"></div>
+                <div class="track-art"></div>
+                <div class="track-name"></div>
+                <div class="track-artist"></div>
+            </div>
+            <div class="slider-container">
+                <div class="current-time">00:00</div>
+                <input 
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="0"
+                    class="seek_slider"
+                    onchange="seekTo()"
+                >
+                <div class="total-duration">00:00</div>
+            </div>
+            <div class="slider-container">
+                <i class="fa fa-volume-down"></i>
+                <input 
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="99"
+                    class="volume_slider"
+                    onchange="setVolume()"
+                >
+                <i class="fa fa-volume-up"></i>
+            </div>
+            <div class="buttons">
+                <div class="random-track" onclick="randomTrack()">
+                    <i class="fas fa-random"></i>
+                </div>
+                <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward"></i>
+                </div>
+                <div class="repeat-track" onclick="repeatTrack()">
+                    <i class="fa fa-repeat"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+</body>
+</html>
